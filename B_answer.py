@@ -41,3 +41,17 @@ if (xmax > xmin) and (ymax > ymin):
     print((xmax - xmin)*(ymax - ymin))
 else:
     print(0)
+
+# abc048
+a, b, x = map(int, input().split())
+
+if a != b:
+    base = (b // x) - (a //x)
+    if a % x == 0:
+        base += 1
+    print(base)
+else:
+    if a % x == 0:
+        print(1)
+    else:
+        print(0)
