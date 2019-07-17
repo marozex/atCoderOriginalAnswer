@@ -55,3 +55,14 @@ else:
         print(1)
     else:
         print(0)
+
+# abc049
+
+h, w = map(int, input().split())
+org_list = [input() for _ in range(h)]
+new_list = []
+for i in org_list:
+    new_list.append(i)
+    new_list.append(i)
+for n in new_list:
+    print(n)
