@@ -66,3 +66,16 @@ for i in org_list:
     new_list.append(i)
 for n in new_list:
     print(n)
+
+# abc50
+
+n = int(input())
+time_list = list(map(int,input().split()))
+m = int(input())
+drink_list = [list(map(int,input().split())) for _ in range(m)]
+sum_time = sum(time_list)
+
+for d in drink_list:
+    effect_index = d[0] - 1
+    effect_time = d[1]
+    print(sum_time - time_list[effect_index] + effect_time)
