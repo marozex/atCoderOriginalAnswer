@@ -79,3 +79,14 @@ for d in drink_list:
     effect_index = d[0] - 1
     effect_time = d[1]
     print(sum_time - time_list[effect_index] + effect_time)
+
+# abc051
+
+k, s = map(int, input().split())
+count = 0
+for kx in range(0, k+1):
+    for ky in range(0, k+1):
+        kz = s - kx -ky
+        if 0 <= kz <= k: # if 0 <= kz <= k and kx + ky + kz == s:　だとTLEになる
+            count += 1
+print(count)
