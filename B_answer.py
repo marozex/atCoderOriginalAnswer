@@ -90,3 +90,17 @@ for kx in range(0, k+1):
         if 0 <= kz <= k: # if 0 <= kz <= k and kx + ky + kz == s:　だとTLEになる
             count += 1
 print(count)
+
+# abc052
+
+n = int(input())
+s = input()
+tmp_list = [0]
+x = 0
+for _ in s:
+    if _ == 'I':
+        x += 1
+    else:
+        x -= 1
+    tmp_list.append(x)
+print(max(tmp_list))
