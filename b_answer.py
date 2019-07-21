@@ -104,3 +104,9 @@ for _ in s:
         x -= 1
     tmp_list.append(x)
 print(max(tmp_list))
+
+# abc053b
+st =input()
+ai = st.find('A')
+zi = st.rfind('Z')
+print(zi - ai + 1)
