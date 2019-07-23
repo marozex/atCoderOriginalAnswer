@@ -124,3 +124,8 @@ for i in range(n-m+1):
             print('Yes')
             sys.exit()
 print('No')
+
+# abc055b
+import math
+n = int(input())
+print(math.factorial(n)%(10**9+7))
