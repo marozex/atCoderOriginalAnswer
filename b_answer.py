@@ -129,3 +129,15 @@ print('No')
 import math
 n = int(input())
 print(math.factorial(n)%(10**9+7))
+
+# abc056b
+w, a, b = map(int, input().split())
+a_list = [a, a+w]
+b_list = [b, b+w]
+if a_list[0]>b_list[1]:
+    print(a_list[0]-b_list[1])
+elif a_list[1]<b_list[0]:
+    print(b_list[0]-a_list[1])
+else:
+    print(0)
+
