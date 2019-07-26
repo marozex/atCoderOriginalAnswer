@@ -150,3 +150,17 @@ for s in student_list:
     for c in check_list:
         tmp.append(abs(s[0]-c[0]) + abs(s[1]-c[1]))
     print(tmp.index(min(tmp))+1)
+
+# abc058b
+o = input()
+e = input()
+
+s = ""
+if len(o) == len(e):
+    for i in range(len(o)):
+        s += o[i]+e[i]
+else:
+    for i in range(len(o)-1):
+        s += o[i]+e[i]
+    s += o[-1]
+print(s)
