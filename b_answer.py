@@ -164,3 +164,13 @@ else:
         s += o[i]+e[i]
     s += o[-1]
 print(s)
+
+# abc059b
+a = int(input())
+b = int(input())
+if a>b:
+    print("GREATER")
+elif a<b:
+    print("LESS")
+else:
+    print("EQUAL")
