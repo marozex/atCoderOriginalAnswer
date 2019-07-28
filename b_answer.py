@@ -174,3 +174,13 @@ elif a<b:
     print("LESS")
 else:
     print("EQUAL")
+
+# abc060b
+a, b, c = map(int, input().split())
+tmp = []
+for i in range(b):
+    tmp.append(a*(i+1)%b)
+if c in tmp:
+    print('YES')
+else:
+    print('NO')
