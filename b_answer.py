@@ -198,3 +198,12 @@ for i in range(n):
     for d in double_dimension:
         column += d[i]
     print(row + column)
+# ↑無駄が多すぎた。↓改善版
+n, m = map(int, input().split())
+double_dimension = [[0]*n for _ in range(n)]
+for _ in range(m):
+    a, b = map(int, input().split())
+    double_dimension[a-1][b-1] += 1
+    double_dimension[b-1][a-1] += 1
+for i in range(n):
+    print(sum(double_dimension[i]))
