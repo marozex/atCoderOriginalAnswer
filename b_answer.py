@@ -198,7 +198,7 @@ for i in range(n):
     for d in double_dimension:
         column += d[i]
     print(row + column)
-# ↑無駄が多すぎた。↓改善版
+# ↑無駄が多すぎた。↓改良版
 n, m = map(int, input().split())
 double_dimension = [[0]*n for _ in range(n)]
 for _ in range(m):
@@ -207,3 +207,11 @@ for _ in range(m):
     double_dimension[b-1][a-1] += 1
 for i in range(n):
     print(sum(double_dimension[i]))
+
+# abc062b
+h, w = map(int, input().split())
+matrix = [input() for _ in range(h)]
+print('#'*(w+2))
+for m in matrix:
+    print('#'+m+'#')
+print('#'*(w+2))
