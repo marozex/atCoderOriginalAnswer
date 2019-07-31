@@ -215,3 +215,14 @@ print('#'*(w+2))
 for m in matrix:
     print('#'+m+'#')
 print('#'*(w+2))
+
+# abc063b
+st = input()
+tmp = []
+for s in st:
+    tmp.append(s)
+if len(tmp) == len(set(tmp)):
+    print('yes')
+else:
+    print('no')
+    
