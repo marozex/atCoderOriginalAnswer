@@ -225,4 +225,9 @@ if len(tmp) == len(set(tmp)):
     print('yes')
 else:
     print('no')
-    
+
+# abc064b
+n = int(input())
+l = list(map(int, input().split()))
+s = set(l)
+print(max(s) - min(s))
