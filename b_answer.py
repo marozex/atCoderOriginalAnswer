@@ -231,3 +231,19 @@ n = int(input())
 l = list(map(int, input().split()))
 s = set(l)
 print(max(s) - min(s))
+
+# abc065b
+# 再帰回数の上限を開放する必要がある
+import sys
+sys.setrecursionlimit(1000000)
+n = int(input())
+a_list = [int(input()) for _ in range(n)]
+def calc_ans(start_num, count, max_count, all_list):
+    ans = all_list[start_num-1]
+    if ans == 2:
+        print(count)
+    elif count == max_count:
+        print('-1')
+    else:
+        calc_ans(ans, count+1, max_count, all_list)
+calc_ans(1, 1, n, a_list)
