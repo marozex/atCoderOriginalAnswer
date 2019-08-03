@@ -272,3 +272,10 @@ for i in range(k):
     max_value = l_list.pop(l_list.index(max(l_list)))
     new_list.append(max_value)
 print(sum(new_list))
+
+# abc068b
+n = int(input())
+result = 2
+while result <= n:
+    result = result*2
+print(result//2)
