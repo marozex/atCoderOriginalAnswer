@@ -263,4 +263,12 @@ for i in range(del_len_min, del_len_max+2, 2):
     if before == after:
         print(l-i)
         sys.exit()
-        
+
+# abc067b
+n, k = map(int, input().split())
+l_list = list(map(int, input().split()))
+new_list = []
+for i in range(k):
+    max_value = l_list.pop(l_list.index(max(l_list)))
+    new_list.append(max_value)
+print(sum(new_list))
