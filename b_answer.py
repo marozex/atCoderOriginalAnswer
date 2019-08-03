@@ -247,3 +247,20 @@ def calc_ans(start_num, count, max_count, all_list):
     else:
         calc_ans(ans, count+1, max_count, all_list)
 calc_ans(1, 1, n, a_list)
+
+# abc066b
+import sys
+s = input()
+l = len(s)
+del_len_max = l-2
+del_len_min = 1 if l%2 == 1 else 2
+if del_len_min == del_len_max:
+    print(del_len_max)
+    sys.exit()
+for i in range(del_len_min, del_len_max+2, 2):
+    before = s[0:(l-i)//2]
+    after = s[(l-i)//2:l-i]
+    if before == after:
+        print(l-i)
+        sys.exit()
+        
