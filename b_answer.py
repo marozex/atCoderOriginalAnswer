@@ -279,3 +279,8 @@ result = 2
 while result <= n:
     result = result*2
 print(result//2)
+
+# abc069b
+s = input()
+l = len(s)
+print(s[0]+str(l-2)+s[-1])
