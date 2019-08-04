@@ -42,3 +42,33 @@ for s in sorted_tmp:
     else:
         print(s[0])
         sys.exit()
+
+# abc064c
+n = int(input())
+li = list(map(int, input().split()))
+co_li = [0]*8
+any_col = 0
+for s in li:
+    if s < 400:
+        co_li[0] += 1
+    elif 400 <= s < 800:
+        co_li[1] += 1
+    elif 800 <= s < 1200:
+        co_li[2] += 1
+    elif 1200 <= s < 1600:
+        co_li[3] += 1
+    elif 1600 <= s < 2000:
+        co_li[4] += 1
+    elif 2000 <= s < 2400:
+        co_li[5] += 1
+    elif 2400 <= s < 2800:
+        co_li[6] += 1
+    elif 2800 <= s < 3200:
+        co_li[7] += 1
+    elif 3200 <= s:
+        any_col += 1
+color_kind = sum(x>0 for x in co_li)
+is_all_any_color = sum(co_li) == 0
+min_sum = color_kind + (1 if is_all_any_color is True else 0)
+max_sum = color_kind + any_col
+print(min_sum,max_sum)
