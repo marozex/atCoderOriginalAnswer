@@ -284,3 +284,16 @@ print(result//2)
 s = input()
 l = len(s)
 print(s[0]+str(l-2)+s[-1])
+
+# abc070b
+a, b, c, d = map(int, input().split())
+if a<=c and d<=b:
+    print(d-c)
+elif c<=a and b<=d:
+    print(b-a)
+elif c<=a and a<=d<=b:
+    print(d-a)
+elif a<=c<=b and b<=d:
+    print(b-c)
+else:
+    print(0)
