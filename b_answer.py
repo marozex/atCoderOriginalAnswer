@@ -297,3 +297,14 @@ elif a<=c<=b and b<=d:
     print(b-c)
 else:
     print(0)
+
+# abc071b
+import sys
+s = input()
+s_set = set(s)
+alpha = 'abcdefghijklmnopqrstuvwxyz'
+for i in alpha:
+    if i not in s_set:
+        print(i)
+        sys.exit()
+print('None')
