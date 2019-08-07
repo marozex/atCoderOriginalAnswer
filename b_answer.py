@@ -316,3 +316,11 @@ for i,j in enumerate(s):
     if i%2 == 0:
         tmp += j
 print(tmp)
+
+# abc073b
+n = int(input())
+li = [list(map(int, input().split())) for _ in range(n)]
+sum = 0
+for l in li:
+    sum += (l[1] - l[0] + 1)
+print(sum)
