@@ -308,3 +308,11 @@ for i in alpha:
         print(i)
         sys.exit()
 print('None')
+
+# abc072b
+s = input()
+tmp = ''
+for i,j in enumerate(s):
+    if i%2 == 0:
+        tmp += j
+print(tmp)
