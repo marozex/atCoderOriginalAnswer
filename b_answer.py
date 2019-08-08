@@ -324,3 +324,16 @@ sum = 0
 for l in li:
     sum += (l[1] - l[0] + 1)
 print(sum)
+
+# abc074b
+n = int(input())
+k = int(input())
+li = list(map(int, input().split()))
+center = k//2
+sum = 0
+for i in li:
+    if i <= center:
+        sum += i*2
+    else:
+        sum += (k-i)*2
+print(sum)
