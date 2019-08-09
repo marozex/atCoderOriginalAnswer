@@ -337,3 +337,38 @@ for i in li:
     else:
         sum += (k-i)*2
 print(sum)
+
+# abc075b
+h, w = map(int, input().split())
+matrix = [[x for x in input()] for y in range(h)]
+
+def check_surround(matrix, x, y):
+    if matrix[x][y] == '#':
+        return '#'
+    else:
+        tmp = []
+        tmp += check_index(matrix, x-1, y-1)
+        tmp += check_index(matrix, x, y-1)
+        tmp += check_index(matrix, x+1, y-1)
+        tmp += check_index(matrix, x-1, y)
+        tmp += check_index(matrix, x+1, y)
+        tmp += check_index(matrix, x-1, y+1)
+        tmp += check_index(matrix, x, y+1)
+        tmp += check_index(matrix, x+1, y+1)
+        return str(str(tmp).count('#'))
+
+def check_index(matrix, x, y):
+    if x > -1 and y > -1:
+        try:
+            return matrix[x][y]
+        except:
+            return str(0)
+    else:
+        return str(0)
+
+for ri in range(h):
+    s = ''
+    for ni in range(w):
+        s += check_surround(matrix, ri, ni)
+    print(s)
+    
