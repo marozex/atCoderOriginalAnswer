@@ -72,3 +72,23 @@ is_all_any_color = sum(co_li) == 0
 min_sum = color_kind + (1 if is_all_any_color is True else 0)
 max_sum = color_kind + any_col
 print(min_sum,max_sum)
+
+# abc070c
+# 解説放送及び先人のコード参考にして記述
+# ユークリッドの互除法
+import sys
+n = int(input())
+src = [int(input()) for _ in range(n)]
+if n == 1:
+    print(src[0])
+    sys.exit()
+def check(a, b):
+    if a < b:
+        a, b = b, a
+    while a % b != 0:
+        a, b = b, a % b
+    return b
+tmp = src[0]
+for i in range(n-1):
+    tmp = tmp//check(tmp, src[i+1])*src[i+1]
+print(tmp)
