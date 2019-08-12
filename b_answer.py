@@ -380,3 +380,13 @@ l = int(math.log2(k))
 a_count = min(n, l+1)
 b_count = max(0, n-a_count)
 print(2**a_count + k*b_count)
+
+# abc077b
+import math
+import sys
+n = int(input())
+for i in range(n, 0, -1):
+    s = math.sqrt(i)
+    if s == int(s):
+        print(i)
+        sys.exit()
