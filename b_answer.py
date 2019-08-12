@@ -371,4 +371,12 @@ for ri in range(h):
     for ni in range(w):
         s += check_surround(matrix, ri, ni)
     print(s)
-    
+
+# abc076b
+import math
+n = int(input())
+k = int(input())
+l = int(math.log2(k))
+a_count = min(n, l+1)
+b_count = max(0, n-a_count)
+print(2**a_count + k*b_count)
