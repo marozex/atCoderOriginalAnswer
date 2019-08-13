@@ -396,3 +396,19 @@ x, y, z = map(int, input().split())
 space = x - y - 2*z
 a = space // (y+z)
 print(a+1)
+
+# abc079b
+n = int(input())
+def cal(a,b,count):
+    tmp = 0
+    while count > 1:
+        count -= 1
+        su = a+b
+        a = b
+        b = su
+        tmp = su
+    return tmp
+if n == 1:
+    print(1)
+else:
+    print(cal(2, 1, n))
