@@ -412,3 +412,24 @@ if n == 1:
     print(1)
 else:
     print(cal(2, 1, n))
+
+## 別解(再帰関数)
+n = int(input())
+def cal(a,b,count):
+    if count == 2:
+        return a+b
+    else:
+        return cal(b, a+b, count-1)
+if n == 1:
+    print(1)
+else:
+    print(cal(2, 1, n))
+
+## 別解(配列要素追加)
+n = int(input())
+if n == 1:
+    print(1)
+li = [2,1]
+for i in range(2,n+1):
+    li.append(li[i-2]+li[i-1])
+print(li[n])
