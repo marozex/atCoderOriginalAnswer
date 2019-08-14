@@ -92,3 +92,21 @@ tmp = src[0]
 for i in range(n-1):
     tmp = tmp//check(tmp, src[i+1])*src[i+1]
 print(tmp)
+
+# abc073c
+n = int(input())
+li = [int(input()) for _ in range(n)]
+li.sort()
+tmp = 0
+new_li = []
+for l in li:
+    if l != tmp:
+        tmp = l
+        new_li.append(1)
+    elif l == tmp:
+        new_li[-1] += 1
+count = 0
+for n in new_li:
+    if n%2 != 0:
+        count += 1
+print(count)
