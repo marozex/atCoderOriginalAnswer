@@ -433,3 +433,11 @@ li = [2,1]
 for i in range(2,n+1):
     li.append(li[i-2]+li[i-1])
 print(li[n])
+
+# abc080b
+n = input()
+li = [int(_) for _ in n]
+if int(n)%sum(li) == 0:
+    print('Yes')
+else:
+    print('No')
