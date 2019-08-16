@@ -455,3 +455,15 @@ for i in li:
         i = i/2
     tmp.append(count)
 print(min(tmp))
+
+# abc082b
+# 下記は解説見て記述
+s = input()
+t = input()
+s_sorted = ''.join(sorted(s))
+t_sorted = ''.join(sorted(t, reverse=True))
+if s_sorted < t_sorted:
+    print('Yes')
+else:
+    print('No')
+    
