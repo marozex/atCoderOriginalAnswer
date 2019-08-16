@@ -441,3 +441,17 @@ if int(n)%sum(li) == 0:
     print('Yes')
 else:
     print('No')
+
+# abc081b
+import math
+import sys
+n = int(input())
+li = list(map(int, input().split()))
+tmp = []
+for i in li:
+    count = 0
+    while i%2 == 0:
+        count += 1
+        i = i/2
+    tmp.append(count)
+print(min(tmp))
