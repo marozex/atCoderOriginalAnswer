@@ -133,3 +133,19 @@ for i in range(diff,-1,-1):
         print(''.join(tmp).replace('?','a'))
         sys.exit()
 print('UNRESTORABLE')
+
+# abc079c
+import sys
+a,b,c,d = map(int,input())
+ans = 7 - a
+li = ['+','-']
+for i in li:
+    for j in li:
+        for k in li:
+            bb = b if i=='+' else -b
+            cc = c if j=='+' else -c
+            dd = d if k=='+' else -d
+            if bb+cc+dd == ans:
+                print(str(a)+i+str(b)+j+str(c)+k+str(d)+'=7')
+                sys.exit()
+                
