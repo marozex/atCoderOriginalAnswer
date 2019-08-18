@@ -110,3 +110,26 @@ for n in new_li:
     if n%2 != 0:
         count += 1
 print(count)
+
+# abc076c
+import sys
+s = input()
+t = input()
+if len(t) > len(s):
+    print('UNRESTORABLE')
+    sys.exit()
+elif len(t) == len(s):
+    print(t)
+    sys.exit()
+diff = len(s)-len(t)
+for i in range(diff,-1,-1):
+    target = s[i:len(t)+i]
+    for ta,te in zip(target,t):
+        if ta != '?' and ta != te:
+            break
+    else:
+        tmp = list(s)
+        tmp[i:len(t)+i] = t
+        print(''.join(tmp).replace('?','a'))
+        sys.exit()
+print('UNRESTORABLE')
