@@ -466,4 +466,38 @@ if s_sorted < t_sorted:
     print('Yes')
 else:
     print('No')
-    
+
+# abc084b
+import sys
+a, b = map(int, input().split())
+s = input()
+if len(s) != a+b+1:
+    print('No')
+    sys.exit()
+
+def check_hi(index,str):
+    tmp = []
+    for i,st in enumerate(str):
+        if st == '-':
+            tmp.append(i)
+    if len(tmp)==1 and tmp[0]==index:
+        return True
+    else:
+        return False
+
+def check_int(i):
+    if i == '-' or int(i) in [0,1,2,3,4,5,6,7,8,9]:
+        return True
+    else:
+        return False
+
+if check_hi(a,s) == False:
+    print('No')
+    sys.exit()
+
+for si in s:
+    if check_int(si) == False:
+        print('No')
+        sys.exit()
+else:
+    print('Yes')
