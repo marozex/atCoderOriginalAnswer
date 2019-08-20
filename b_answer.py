@@ -501,3 +501,10 @@ for si in s:
         sys.exit()
 else:
     print('Yes')
+# ↑Sは0以上9以下の数字、およびハイフン-からなる、という条件を無視していた
+
+# abc085b
+n = int(input())
+li = [int(input()) for _ in range(n)]
+se = set(li)
+print(len(se))
