@@ -508,3 +508,13 @@ n = int(input())
 li = [int(input()) for _ in range(n)]
 se = set(li)
 print(len(se))
+
+# abc086b
+import math
+src = input().split()
+new = int(''.join(src))
+if int(math.sqrt(new)) == math.sqrt(new):
+    print('Yes')
+else:
+    print('No')
+    
