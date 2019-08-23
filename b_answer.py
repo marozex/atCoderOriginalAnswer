@@ -517,4 +517,29 @@ if int(math.sqrt(new)) == math.sqrt(new):
     print('Yes')
 else:
     print('No')
-    
+
+# abc087b
+a = int(input())
+b = int(input())
+c = int(input())
+x = int(input())
+count = 0
+for ai in range(a+1):
+    for bi in range(b+1):
+        for ci in range(c+1):
+            if 500*ai+100*bi+50*ci == x:
+                count += 1
+print(count)
+
+# abc088b
+n = int(input())
+src = list(map(int, input().split()))
+a = 0
+b = 0
+srt = sorted(src, reverse=True)
+for i,s in enumerate(srt):
+    if i%2 == 0:
+        a += s
+    else:
+        b += s
+print(a-b)
