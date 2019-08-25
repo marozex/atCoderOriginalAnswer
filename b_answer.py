@@ -543,3 +543,13 @@ for i,s in enumerate(srt):
     else:
         b += s
 print(a-b)
+
+# abc089b
+n = int(input())
+src = list(input().split())
+kind = set(src)
+if len(kind) == 3:
+    print('Three')
+else:
+    print('Four')
+    
