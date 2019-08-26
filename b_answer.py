@@ -552,4 +552,11 @@ if len(kind) == 3:
     print('Three')
 else:
     print('Four')
-    
+
+# abc090b
+a, b = map(int, input().split())
+count = 0
+for i in range(a,b+1):
+    if i == int(''.join(list(reversed(str(i))))):
+        count += 1
+print(count)
