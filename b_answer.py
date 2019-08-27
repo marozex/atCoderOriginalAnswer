@@ -560,3 +560,21 @@ for i in range(a,b+1):
     if i == int(''.join(list(reversed(str(i))))):
         count += 1
 print(count)
+
+# abc091b
+n = int(input())
+s_li = [input() for i in range(n)]
+m = int(input())
+t_li = [input() for i in range(m)]
+tmp_map = {}
+for s in s_li:
+    if s not in tmp_map:
+        tmp_map[s] = 1
+    else:
+        tmp_map[s] +=1
+for m in t_li:
+    if m not in tmp_map:
+        tmp_map[m] = -1
+    else:
+        tmp_map[m] -=1
+print(max(tmp_map.values()) if max(tmp_map.values())>0 else 0)
