@@ -578,3 +578,12 @@ for m in t_li:
     else:
         tmp_map[m] -=1
 print(max(tmp_map.values()) if max(tmp_map.values())>0 else 0)
+
+# abc092b
+n = int(input())
+d, x = map(int, input().split())
+src = [int(input()) for _ in range(n)]
+count = 0
+for s in src:
+    count += (d - 1)//s + 1
+print(count+x)
