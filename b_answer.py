@@ -587,3 +587,14 @@ count = 0
 for s in src:
     count += (d - 1)//s + 1
 print(count+x)
+
+# abc093b
+a,b,k = map(int,input().split())
+if k > b-a+1:
+    k = b-a+1
+li = set()
+for i in range(k):
+    li.add(a+i)
+    li.add(b-i)
+for l in sorted(li):
+    print(l)
