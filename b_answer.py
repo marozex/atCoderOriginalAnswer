@@ -598,3 +598,10 @@ for i in range(k):
     li.add(b-i)
 for l in sorted(li):
     print(l)
+
+# abc094b
+k, m, x = map(int, input().split())
+src = list(map(int, input().split()))
+big = len(list(filter(lambda l: l>x, src)))
+small = len(list(filter(lambda l: l<x, src)))
+print(min(big,small))
