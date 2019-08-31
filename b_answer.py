@@ -605,3 +605,8 @@ src = list(map(int, input().split()))
 big = len(list(filter(lambda l: l>x, src)))
 small = len(list(filter(lambda l: l<x, src)))
 print(min(big,small))
+
+# abc095b
+n, x = map(int, input().split())
+src = [int(input()) for _ in range(n)]
+print((x - sum(src))//min(src) + n)
