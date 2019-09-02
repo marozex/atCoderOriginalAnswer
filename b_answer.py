@@ -610,3 +610,10 @@ print(min(big,small))
 n, x = map(int, input().split())
 src = [int(input()) for _ in range(n)]
 print((x - sum(src))//min(src) + n)
+
+# abc096b
+a,b,c = map(int,input().split())
+k = int(input())
+src_sum = a+b+c
+src_max = max(a,b,c)
+print(src_max*(2**k)+src_sum-src_max)
