@@ -617,3 +617,15 @@ k = int(input())
 src_sum = a+b+c
 src_max = max(a,b,c)
 print(src_max*(2**k)+src_sum-src_max)
+
+# abc097b
+import math
+import sys
+x = int(input())
+for i in range(x,0,-1):
+    for j in range(x,0,-1):
+        for k in range(10,1,-1):
+            if i == j**k:
+                print(i)
+                sys.exit()
+                
