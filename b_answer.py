@@ -628,4 +628,15 @@ for i in range(x,0,-1):
             if i == j**k:
                 print(i)
                 sys.exit()
-                
+
+# abc098b
+n = int(input())
+s = input()
+newlist = []
+for ni in range(n):
+    newlist.append([s[0:ni+1],s[ni+1:n]])
+count = 0
+for n in newlist:
+    if len(set(n[0]) & set(n[1]))>count:
+        count = len(set(n[0]) & set(n[1]))
+print(count)
