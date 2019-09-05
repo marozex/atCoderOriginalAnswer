@@ -640,3 +640,8 @@ for n in newlist:
     if len(set(n[0]) & set(n[1]))>count:
         count = len(set(n[0]) & set(n[1]))
 print(count)
+
+# abc099b
+a, b = map(int,input().split())
+a_len = sum([_ for _ in range(b-a)])
+print(a_len-a)
