@@ -645,3 +645,22 @@ print(count)
 a, b = map(int,input().split())
 a_len = sum([_ for _ in range(b-a)])
 print(a_len-a)
+
+# abc100b
+d,n = map(int,input().split())
+if d == 0:
+    if n == 100:
+        print(101)
+    else:
+        print(n)
+elif d == 1:
+    if n == 100:
+        print(10100)
+    else:
+        print(n*100)
+elif d == 2:
+    if n == 100:
+        print(1010000)
+    else:
+        print(n*10000)
+        
