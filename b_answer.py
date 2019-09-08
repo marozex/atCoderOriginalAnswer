@@ -663,4 +663,15 @@ elif d == 2:
         print(1010000)
     else:
         print(n*10000)
-        
+
+# abc101b
+n = input()
+src = list(n)
+count = 0
+for s in src:
+    count += int(s)
+if int(n) % count == 0:
+    print('Yes')
+else:
+    print('No')
+    
