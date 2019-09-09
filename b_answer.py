@@ -674,4 +674,8 @@ if int(n) % count == 0:
     print('Yes')
 else:
     print('No')
-    
+
+# abc102b
+n = int(input())
+src = list(map(int, input().split()))
+print(max(src)-min(src))
