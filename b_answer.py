@@ -679,3 +679,18 @@ else:
 n = int(input())
 src = list(map(int, input().split()))
 print(max(src)-min(src))
+
+# abc103b
+import sys
+s = list(input())
+t = list(input())
+if s == t:
+    print('Yes')
+    sys.exit()
+for si in range(len(s)+1):
+    before = s[0:si+1]
+    after = s[si+1:len(s)+1]
+    if after + before == t:
+        print('Yes')
+        sys.exit()
+print('No')
