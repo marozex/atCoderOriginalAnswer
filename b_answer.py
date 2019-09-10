@@ -694,3 +694,27 @@ for si in range(len(s)+1):
         print('Yes')
         sys.exit()
 print('No')
+
+# abc104b
+import sys
+def check_small(string):
+    if string in 'abcdefghijklmnopqrstuvwxyz':
+        return True
+    else:
+        return False
+
+s = input()
+if s[0] != 'A':
+    print('WA')
+    sys.exit()
+if check_small(s[-1]) == False:
+    print('WA')
+    sys.exit()
+count = 0
+for si in s[3:]:
+        if si == 'C':
+            count += 1
+        elif check_small(si) == False:
+            print('WA')
+            sys.exit()
+print('AC' if count == 1 else 'WA')
