@@ -729,3 +729,16 @@ for m in range(max7+1):
         print('Yes')
         sys.exit()
 print('No')
+
+# abc106b
+n = int(input())
+count = 0
+for ni in range(1,n+1):
+    if ni%2 == 1:
+        nj_count = 0
+        for nj in range(1,ni+1):
+            if ni%nj == 0:
+                nj_count += 1
+        if nj_count == 8:
+            count += 1
+print(count)
