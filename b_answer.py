@@ -718,3 +718,14 @@ for si in s[3:]:
             print('WA')
             sys.exit()
 print('AC' if count == 1 else 'WA')
+
+# abc105b
+import math
+import sys
+n = int(input())
+max7 = math.ceil(n / 7)
+for m in range(max7+1):
+    if (n-7*m) >= 0 and (n-7*m)%4 == 0:
+        print('Yes')
+        sys.exit()
+print('No')
