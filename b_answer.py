@@ -742,3 +742,21 @@ for ni in range(1,n+1):
         if nj_count == 8:
             count += 1
 print(count)
+
+# abc109b
+import sys
+n = int(input())
+src = [input() for _ in range(n)]
+tmp = ''
+for i,s in enumerate(src):
+    if i == 0:
+        tmp = s[-1]
+    else:
+        if s[0] != tmp:
+            print('No')
+            sys.exit()
+        tmp = s[-1]
+if len(src) != len(set(src)):
+    print('No')
+    sys.exit()
+print('Yes')
