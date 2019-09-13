@@ -760,3 +760,13 @@ if len(src) != len(set(src)):
     print('No')
     sys.exit()
 print('Yes')
+
+# abc111b
+n = input()
+li = list(n)
+same = li[0]*len(li)
+if int(n) <= int(same):
+    print(same)
+else:
+    print(str(int(li[0])+1)*len(li))
+    
