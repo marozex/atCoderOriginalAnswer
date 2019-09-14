@@ -769,4 +769,16 @@ if int(n) <= int(same):
     print(same)
 else:
     print(str(int(li[0])+1)*len(li))
-    
+
+# abc112b
+import sys
+n, t = map(int,input().split())
+src = [list(map(int,input().split())) for _ in range(n)]
+new = []
+for s in src:
+    if s[1] <= t:
+        new.append(s[0])
+if len(new) == 0:
+    print('TLE')
+    sys.exit()
+print(min(new))
