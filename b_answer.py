@@ -782,3 +782,13 @@ if len(new) == 0:
     print('TLE')
     sys.exit()
 print(min(new))
+
+# abc113b
+import math
+n = int(input())
+t, a = map(int,input().split())
+src = list(map(int,input().split()))
+new = []
+for s in src:
+    new.append(math.fabs(t-s*0.006-a))
+print(new.index(min(new))+1)
