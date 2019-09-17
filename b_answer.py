@@ -792,3 +792,12 @@ new = []
 for s in src:
     new.append(math.fabs(t-s*0.006-a))
 print(new.index(min(new))+1)
+
+# abc114b
+import math
+s = input()
+li = []
+for i in range(len(s)-2):
+    tmp = int(s[i:i+3])
+    li.append(math.fabs(tmp-753))
+print(int(min(li)))
