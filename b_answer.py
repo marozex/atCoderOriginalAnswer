@@ -801,3 +801,10 @@ for i in range(len(s)-2):
     tmp = int(s[i:i+3])
     li.append(math.fabs(tmp-753))
 print(int(min(li)))
+
+# abc115b
+n = int(input())
+src = [int(input()) for _ in range(n)]
+sorted_src = sorted(src)
+sorted_src[-1] = sorted_src[-1]/2
+print(int(sum(sorted_src)))
