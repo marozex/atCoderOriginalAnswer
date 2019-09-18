@@ -808,3 +808,25 @@ src = [int(input()) for _ in range(n)]
 sorted_src = sorted(src)
 sorted_src[-1] = sorted_src[-1]/2
 print(int(sum(sorted_src)))
+
+# abc116b
+import sys
+n = int(input())
+def calc(x):
+    if x%2 == 0:
+        return int(x/2)
+    else:
+        return 3*x+1
+li = [n]
+flg = 0
+ans = n
+count = 1
+while flg == 0:
+    ans = calc(ans)
+    if ans in li:
+        print(count+1)
+        flg += 1
+        sys.exit()
+    else:
+        li.append(ans)
+        count += 1
