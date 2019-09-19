@@ -830,3 +830,13 @@ while flg == 0:
     else:
         li.append(ans)
         count += 1
+
+# abc117b
+n = int(input())
+src = list(map(int,input().split()))
+m = max(src)
+if m < sum(src)-m:
+    print('Yes')
+else:
+    print('No')
+    
