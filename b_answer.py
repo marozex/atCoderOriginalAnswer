@@ -857,3 +857,14 @@ for t in tmp.values():
     if t == n:
         count +=1
 print(count)
+
+# abc119b
+n = int(input())
+src = [input().split() for _ in range(n)]
+count = 0
+for s in src:
+    if s[1] == 'JPY':
+        count += float(s[0])
+    else:
+        count += float(s[0])*380000
+print(count)
