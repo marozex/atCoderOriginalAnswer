@@ -839,4 +839,21 @@ if m < sum(src)-m:
     print('Yes')
 else:
     print('No')
-    
+
+# abc118b
+n, m = map(int, input().split())
+src_all = [input().split() for _ in range(n)]
+# src = [['2', '1', '3'], ['3', '1', '2', '3'], ['2', '3', '2']]
+tmp = {}
+for src in src_all:
+    for i,s in enumerate(src):
+        if i != 0:
+            if s in tmp:
+                tmp[s] += 1
+            else:
+                tmp[s] = 1
+count = 0
+for t in tmp.values():
+    if t == n:
+        count +=1
+print(count)
