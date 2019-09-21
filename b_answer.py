@@ -868,3 +868,26 @@ for s in src:
     else:
         count += float(s[0])*380000
 print(count)
+
+# abc120b
+import math
+a,b,k = map(int,input().split())
+m = min(a,b)
+li = []
+for mi in range(1,m+1):
+    if a%mi == 0 and b%mi == 0:
+        li.append(mi)
+print(li[-k])
+
+# abc121b
+n,m,c = map(int,input().split())
+b_li = list(map(int, input().split()))
+a_li = [list(map(int,input().split())) for _ in range(n)]
+count = 0
+for each in a_li:
+    su = c
+    for a,b in zip(each,b_li):
+        su += a*b
+    if su > 0:
+        count += 1
+print(count)
