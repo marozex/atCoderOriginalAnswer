@@ -891,3 +891,13 @@ for each in a_li:
     if su > 0:
         count += 1
 print(count)
+
+# abc122b
+s = input()
+l = len(s)
+li = [0]
+for i in range(l):
+    for j in range(l-i):
+        if all([k in ['A','C','G','T'] for k in list(s[i:i+j+1])]):
+            li.append(len(s[i:i+j+1]))
+print(max(li))
