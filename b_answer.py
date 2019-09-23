@@ -901,3 +901,26 @@ for i in range(l):
         if all([k in ['A','C','G','T'] for k in list(s[i:i+j+1])]):
             li.append(len(s[i:i+j+1]))
 print(max(li))
+
+# abc123b
+import math
+src = [input() for _ in range(5)]
+k_li = []
+v_li = []
+sum = 0
+for s in src:
+    if int(s[-1]) != 0:
+        k_li.append(int(s[-1]))
+        v_li.append(int(s))
+    else:
+        sum += int(s)
+flag = False
+if len(k_li)>0:
+    m = min(k_li)
+    for k,v in zip(k_li,v_li):
+        if k == m and flag == False:
+            sum += v
+            flag = True
+        else:
+            sum += math.ceil(v/10)*10
+print(sum)
