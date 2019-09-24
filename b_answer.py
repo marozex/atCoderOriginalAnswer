@@ -924,3 +924,14 @@ if len(k_li)>0:
         else:
             sum += math.ceil(v/10)*10
 print(sum)
+
+# abc124b
+n = int(input())
+src = list(map(int, input().split()))
+m = src[0]
+count = 0
+for s in src:
+    if s >= m:
+        count += 1
+        m = s
+print(count)
