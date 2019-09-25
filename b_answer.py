@@ -935,3 +935,13 @@ for s in src:
         count += 1
         m = s
 print(count)
+
+# abc125b
+n = int(input())
+v_src = list(map(int, input().split()))
+c_src = list(map(int, input().split()))
+count = 0
+for v,c in zip(v_src,c_src):
+    if v-c>0:
+        count += v-c
+print(count)
