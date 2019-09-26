@@ -945,3 +945,21 @@ for v,c in zip(v_src,c_src):
     if v-c>0:
         count += v-c
 print(count)
+
+# abc126b
+s = input()
+before = s[0:2]
+after = s[2:4]
+
+b = 0<int(before)<13
+a = 0<int(after)<13
+
+if a and b:
+    print('AMBIGUOUS')
+elif a and not b:
+    print('YYMM')
+elif b and not a:
+    print('MMYY')
+else:
+    print('NA')
+    
