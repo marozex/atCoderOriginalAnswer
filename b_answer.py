@@ -968,4 +968,15 @@ r,d,x = map(int,input().split())
 for _ in range(10):
     print(r*x - d)
     x = r*x - d
-    
+
+# abc129b
+n = int(input())
+src = list(map(int,input().split()))
+sum_src = sum(src)
+li = []
+left = 0
+for i,s in enumerate(src):
+    if i != len(src)-1:
+        left += s
+        li.append(abs(sum_src - left*2))
+print(min(li))
