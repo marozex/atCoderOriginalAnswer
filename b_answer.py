@@ -980,3 +980,14 @@ for i,s in enumerate(src):
         left += s
         li.append(abs(sum_src - left*2))
 print(min(li))
+
+# abc130b
+n, x = map(int, input().split())
+src = list(map(int, input().split()))
+li = [0]
+h = 0
+for s in src:
+    h += s
+    if h <= x:
+        li.append(h)
+print(len(li))
