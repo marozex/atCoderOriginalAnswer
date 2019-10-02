@@ -991,3 +991,14 @@ for s in src:
     if h <= x:
         li.append(h)
 print(len(li))
+
+#abc131b
+import math
+n, l = map(int, input().split())
+fabs_lis = []
+true_lis = []
+for i in range(n):
+    fabs_lis.append(math.fabs(i+l))
+    true_lis.append(i+l)
+index = fabs_lis.index(min(fabs_lis))
+print(sum(true_lis)-true_lis[index])
