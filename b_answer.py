@@ -1002,3 +1002,16 @@ for i in range(n):
     true_lis.append(i+l)
 index = fabs_lis.index(min(fabs_lis))
 print(sum(true_lis)-true_lis[index])
+
+# abc132b
+n = input()
+src = list(map(int, input().split()))
+count = 0
+for i in range(len(src)-2):
+    if src[i]<src[i+1]<src[i+2]:
+        count += 1
+new_li = list(reversed(src))
+for n in range(len(new_li)-2):
+    if new_li[n]<new_li[n+1]<new_li[n+2]:
+        count += 1
+print(count)
