@@ -467,6 +467,19 @@ if s_sorted < t_sorted:
 else:
     print('No')
 
+# abc083b
+n, a, b = map(int,input().split())
+all_sum = 0
+for i in range(1,n+1):
+    i_li = list(str(i))
+    #print(i_li)
+    sum = 0
+    for i_li_element in i_li:
+        sum += int(i_li_element)
+    if a<=sum<=b:
+        all_sum += i
+print(all_sum)
+
 # abc084b
 import sys
 a, b = map(int, input().split())
