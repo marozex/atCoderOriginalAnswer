@@ -804,6 +804,18 @@ if len(src) != len(set(src)):
     sys.exit()
 print('Yes')
 
+# abc110b
+import sys
+n,m,x,y = map(int,input().split())
+x_li = list(map(int,input().split()))
+y_li = list(map(int,input().split()))
+for z in range(x+1,y+1):
+    if z>x and z>max(x_li) and z<=y and z<=min(y_li):
+        print('No War')
+        sys.exit()
+else:
+    print('War')
+    
 # abc111b
 n = input()
 li = list(n)
