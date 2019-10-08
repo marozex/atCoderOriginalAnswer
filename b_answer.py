@@ -815,7 +815,7 @@ for z in range(x+1,y+1):
         sys.exit()
 else:
     print('War')
-    
+
 # abc111b
 n = input()
 li = list(n)
@@ -1023,6 +1023,36 @@ r,d,x = map(int,input().split())
 for _ in range(10):
     print(r*x - d)
     x = r*x - d
+
+# abc128b
+n = int(input())
+li = [input().split() for _ in range(n)]
+#print(src)
+#[['khabarovsk', '20'], ['moscow', '10'], ['kazan', '50'], ['kazan', '35'], ['moscow', '60'], ['khabarovsk', '40']]
+key_li = []
+for l in li:
+    if l[0] not in key_li:
+        key_li.append(l[0])
+dict = {}
+sorted_ki = sorted(key_li)
+for i,s in enumerate(sorted_ki):
+    dict[i] = []
+    for j,l in enumerate(li):
+        if s == l[0]:
+            dict[i].append([int(l[1]),j])
+fin_li = []
+for k in range(len(dict)):
+    each_li = []
+    for d in dict[k]:
+        if d not in each_li:
+            each_li.append(d[0])
+    s_e_li = sorted(each_li, reverse=True)
+    for s_e in s_e_li:
+        for d in dict[k]:
+            if s_e == d[0]:
+                fin_li.append(d[1]+1)
+for f in fin_li:
+    print(f)
 
 # abc129b
 n = int(input())
