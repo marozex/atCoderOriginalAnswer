@@ -1110,3 +1110,17 @@ y3 = d + x
 x4 = a - y
 y4 = b + x
 print(x3,y3,x4,y4)
+
+### 以下はABC200点相当なのでB問題とする
+# AGC001a
+import heapq
+n = int(input())
+src = list(map(int, input().split()))
+sorted_src = sorted(src)
+heapq.heapify(sorted_src)
+count = 0
+for i in range(n):
+    a = heapq.heappop(sorted_src)
+    heapq.heappop(sorted_src)
+    count += a
+print(count)
