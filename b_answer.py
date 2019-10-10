@@ -1124,3 +1124,16 @@ for i in range(n):
     heapq.heappop(sorted_src)
     count += a
 print(count)
+
+# AGC002a
+a,b = map(int,input().split())
+if a > 0:
+    print('Positive')
+    sys.exit()
+if b >= 0:
+    print('Zero')
+    sys.exit()
+if (b-a+1)%2 == 1:
+    print('Negative')
+else:
+    print('Positive')
