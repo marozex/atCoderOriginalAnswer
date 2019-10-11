@@ -1137,3 +1137,24 @@ if (b-a+1)%2 == 1:
     print('Negative')
 else:
     print('Positive')
+
+# AGC003a
+src = input()
+a = False
+b = False
+c = False
+d = False
+for s in src:
+    if s == 'N':
+        a = True
+    elif s == 'W':
+        b = True
+    elif s == 'S':
+        c = True
+    elif s == 'E':
+        d = True
+if a != c or b != d:
+    print('No')
+else:
+    print('Yes')
+    
