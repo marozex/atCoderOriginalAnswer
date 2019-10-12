@@ -1158,3 +1158,11 @@ if a != c or b != d:
 else:
     print('Yes')
     
+# AGC004a
+a,b,c = map(int,input().split())
+if a*b*c%2 == 0:
+    print(0)
+else:
+    sorted_src = sorted([a,b,c])
+    print(sorted_src[0]*sorted_src[1])
+    
