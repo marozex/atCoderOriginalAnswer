@@ -1165,4 +1165,14 @@ if a*b*c%2 == 0:
 else:
     sorted_src = sorted([a,b,c])
     print(sorted_src[0]*sorted_src[1])
-    
+
+# AGC006a
+import sys
+n = int(input())
+s = input()
+t = input()
+same_count = 0
+for i in range(n):
+    if s[n-1-i:] == t[:i+1]:
+        same_count = i+1
+print(2*n-same_count)
