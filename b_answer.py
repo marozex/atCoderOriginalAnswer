@@ -1176,3 +1176,14 @@ for i in range(n):
     if s[n-1-i:] == t[:i+1]:
         same_count = i+1
 print(2*n-same_count)
+
+# AGC015a
+import sys
+n, a, b = map(int,input().split())
+if a == b and n == 1:
+    print(1)
+    sys.exit()
+elif a > b or n == 1:
+    print(0)
+    sys.exit()
+print((b - a)*(n - 2) + 1)
