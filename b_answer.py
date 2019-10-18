@@ -1187,3 +1187,21 @@ elif a > b or n == 1:
     print(0)
     sys.exit()
 print((b - a)*(n - 2) + 1)
+
+# AGC017a
+n, p = map(int,input().split())
+src = list(map(int, input().split()))
+even_count = 0 #偶数
+odd_count = 0 #奇数
+for s in src:
+    if s%2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+if p == 1 and odd_count == 0:
+    print(0)
+elif odd_count == 0:
+    print(2**even_count)
+else:
+    print(2**even_count*2**(odd_count-1))
+    
