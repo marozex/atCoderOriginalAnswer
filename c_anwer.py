@@ -149,3 +149,44 @@ for i in li:
                 print(str(a)+i+str(b)+j+str(c)+k+str(d)+'=7')
                 sys.exit()
                 
+#abc104c
+import itertools
+import math
+d,g = map(int,input().split())
+lis = [list(map(int,input().split())) for _ in range(d)]
+# print(list(itertools.product([0,1], repeat=d))) [(0, 0), (0, 1), (1, 0), (1, 1)]
+count_list = []
+for flag in itertools.product([0,1], repeat=d):
+    tmp = g
+    count = 0
+    score_list = []
+    kosuu_list = []
+    for i,f in enumerate(flag):
+        if f==1:
+            count += lis[i][0]
+            #print(lis[i][1],100*(i+1),lis[i][0],tmp)
+            tmp -= (lis[i][1]+100*(i+1)*lis[i][0])
+        else:
+            score_list.insert(0,100*(i+1))
+            kosuu_list.insert(0,lis[i][0]-1)
+    #print(score_list)
+    #print(kosuu_list)
+    #print(lis[i][1],100*(i+1),lis[i][0],tmp)
+    if tmp <= 0:
+        count_list.append(count)
+    else:
+        for sss,kkk in zip(score_list,kosuu_list):
+            if tmp <= 0:
+                break
+            elif sss*kkk >= tmp:
+                count += math.ceil(tmp/sss)
+                tmp -= sss*math.ceil(tmp/sss)
+                break
+            elif sss*kkk < tmp:
+                count += kkk
+                tmp -= sss*kkk
+        if tmp <= 0:
+            count_list.append(count)
+    #print(flag)
+#print(count_list)
+print(min(count_list))
