@@ -190,3 +190,16 @@ for flag in itertools.product([0,1], repeat=d):
     #print(flag)
 #print(count_list)
 print(min(count_list))
+
+#abc103c
+import fractions
+N = int(input())
+a = list(map(int, input().split()))
+ans = a[0]
+for i in range(1, N):
+    ans = ans * a[i] // fractions.gcd(ans, a[i])
+target = ans - 1
+sum = 0
+for aa in a:
+    sum += target%aa
+print(sum)
