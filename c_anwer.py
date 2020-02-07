@@ -203,3 +203,21 @@ sum = 0
 for aa in a:
     sum += target%aa
 print(sum)
+
+#abc100c
+def warizan(n):
+    flag = True
+    count = 0
+    while flag == True:
+        if n/2 == n//2:
+            count += 1
+            n = n/2
+        else:
+            flag = False
+    return count
+
+import math
+n = int(input())
+lis = list(map(int, input().split()))
+new_lis = [warizan(l) for l in lis if l%2 == 0]
+print(sum(new_lis))
