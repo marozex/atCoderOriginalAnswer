@@ -221,3 +221,20 @@ n = int(input())
 lis = list(map(int, input().split()))
 new_lis = [warizan(l) for l in lis if l%2 == 0]
 print(sum(new_lis))
+
+#abc096c
+import sys
+h,w = map(int,input().split())
+matrix = [[0]*(w+2) for _ in range(h+2)]
+for hi in range(h):
+    all_inp = input()
+    for i,a in enumerate(all_inp):
+        matrix[hi+1][i+1]= 1 if a == '#' else 0
+#print(matrix)
+for ri,row in enumerate(matrix):
+    for ci,column in enumerate(row):
+        if column == 1:
+            if row[ci-1] == 0 and row[ci+1] == 0 and matrix[ri-1][ci] == 0 and matrix[ri+1][ci] == 0:
+                print('No')
+                sys.exit()
+print('Yes')
