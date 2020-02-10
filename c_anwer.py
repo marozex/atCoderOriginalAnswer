@@ -238,3 +238,17 @@ for ri,row in enumerate(matrix):
                 print('No')
                 sys.exit()
 print('Yes')
+
+#abc088c
+import sys
+lis = [list(map(int,input().split())) for _ in range(3)]
+d1 = lis[0][0] - lis[0][1]
+d2 = lis[0][1] - lis[0][2]
+flag = 'No'
+for l in lis:
+    if l[0] - l[1] != d1 or l[1] - l[2] != d2:
+        print('No')
+        sys.exit()
+else:
+    flag = 'Yes'
+print(flag)
