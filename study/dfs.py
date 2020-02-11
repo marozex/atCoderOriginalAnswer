@@ -1,5 +1,6 @@
-#atcoder_typical_contest_001
-#pythonは再帰の上限を再設定する必要がある
+# atcoder_typical_contest_001
+# https://atc001.contest.atcoder.jp/tasks/dfs_a
+# pythonは再帰の上限を再設定する必要がある
 import sys
 sys.setrecursionlimit(1000000)
 
