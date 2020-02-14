@@ -286,4 +286,23 @@ while True:
     elif n > 0 and n%2 ==0:
         ans_str = '0' + ans_str
         n = -(n//2)
+
+#abc106c
+s = input()
+k = int(input())
+#5,000,000,000,000,000
+count = 5000000000000000
+
+lis = [int(s[i]) for i in range(len(s))]
+for l in lis:
+    if l == 1:
+        if k > 1:
+            k -= 1
+            continue
+        else:
+            print(1)
+            exit()
+    else:
+        print(l)
+        exit()
         
