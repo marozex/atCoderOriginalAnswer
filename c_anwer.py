@@ -305,4 +305,19 @@ for l in lis:
     else:
         print(l)
         exit()
-        
+
+#abc109c
+n, x = map(int,input().split())
+tmp = list(map(int,input().split()))
+tmp.append(x)
+se = list(sorted(set(tmp)))
+lis = []
+for si,s in enumerate(se):
+    lis.append(se[si]-se[si-1])
+
+import fractions
+a = lis
+ans = a[0]
+for i in range(1, len(a)):
+    ans = fractions.gcd(ans, a[i])
+print(ans)
