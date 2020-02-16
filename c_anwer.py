@@ -321,3 +321,19 @@ ans = a[0]
 for i in range(1, len(a)):
     ans = fractions.gcd(ans, a[i])
 print(ans)
+
+#abc127c
+n, m = map(int,input().split())
+l_lis = []
+r_lis = []
+for _ in range(m):
+    tmp = list(map(int,input().split()))
+    l_lis.append(tmp[0])
+    r_lis.append(tmp[1])
+ll = max(l_lis)
+rr = min(r_lis)
+count = rr - ll + 1
+if count <= 0:
+    print(0)
+else:
+    print(count)
