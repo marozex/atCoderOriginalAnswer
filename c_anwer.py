@@ -337,3 +337,18 @@ if count <= 0:
     print(0)
 else:
     print(count)
+
+#abc124c
+s = input()
+s_lis = list(s)
+l = len(s)
+a = ['0' if i%2 == 0 else '1' for i in range(l)]
+b = ['1' if i%2 == 0 else '0' for i in range(l)]
+a_count = 0
+b_count = 0
+for si,ai,bi in zip(s_lis,a,b):
+    if si != ai:
+        a_count += 1
+    if si != bi:
+        b_count += 1
+print(min(a_count,b_count))
