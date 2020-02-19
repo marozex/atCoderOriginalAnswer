@@ -352,3 +352,13 @@ for si,ai,bi in zip(s_lis,a,b):
     if si != bi:
         b_count += 1
 print(min(a_count,b_count))
+
+#abc123c
+import math
+n = int(input())
+lis = [int(input()) for _ in range(5)]
+l = len(lis)
+m = min(lis)
+if n > m:
+    l += math.ceil((n-m)/m)
+print(l)
