@@ -379,4 +379,27 @@ for i,ss in enumerate(s):
 #print(rui)
 for l in lis:
     print(rui[l[1]-1]-rui[l[0]-1])
-    
+
+#abc121c
+n , m = map(int,input().split())
+dic = {}
+for _ in range(n):
+    lis = list(map(int,input().split()))
+    a = lis[0]
+    b = lis[1]
+    if a not in dic:
+        dic[a] = b
+    else:
+        dic[a] += b
+s = sorted(dic.items())
+
+answer = 0
+for ss in s:
+    if ss[1]>=m:
+        answer += m*ss[0]
+        print(answer)
+        exit()
+    else:
+        answer += ss[1]*ss[0]
+        m -= ss[1]
+        continue
