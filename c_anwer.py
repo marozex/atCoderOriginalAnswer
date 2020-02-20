@@ -362,3 +362,21 @@ m = min(lis)
 if n > m:
     l += math.ceil((n-m)/m)
 print(l)
+
+#abc122c
+n,q = map(int,input().split())
+s = input()
+lis = [list(map(int,input().split())) for _ in range(q)]
+rui = []
+for i,ss in enumerate(s):
+    if i == 0:
+        rui.append(0)
+    else:
+        if ss == 'C' and  s[i-1] == 'A':
+            rui.append(rui[-1]+1)
+        else:
+            rui.append(rui[-1])
+#print(rui)
+for l in lis:
+    print(rui[l[1]-1]-rui[l[0]-1])
+    
