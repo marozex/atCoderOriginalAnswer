@@ -403,3 +403,14 @@ for ss in s:
         answer += ss[1]*ss[0]
         m -= ss[1]
         continue
+
+#abc120c
+s = input()
+a = 0
+b = 0
+for i in s:
+    if i == '0':
+        a += 1
+    else:
+        b += 1
+print(min(a,b)*2)
