@@ -414,3 +414,12 @@ for i in s:
     else:
         b += 1
 print(min(a,b)*2)
+
+# abc003c
+n, k = map(int,input().split())
+li = list(map(int,input().split()))
+s_li = sorted(sorted(li, reverse=True)[:k])
+tmp = 0
+for i,s in enumerate(s_li):
+    tmp += s/(2**(k-i))
+print(tmp)
