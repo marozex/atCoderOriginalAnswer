@@ -423,3 +423,13 @@ tmp = 0
 for i,s in enumerate(s_li):
     tmp += s/(2**(k-i))
 print(tmp)
+
+# abc033c
+li = list(input().split('+'))
+#print(s)
+#['3*1*4', '0', '2*0', '5*2', '9*8*6', '1', '3']
+count = 0
+for l in li:
+    if '0' not in l:
+        count += 1
+print(count)
